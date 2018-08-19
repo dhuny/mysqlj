@@ -1,0 +1,30 @@
+{
+    "name": "dhuny/mysqlj",
+    "type": "library",
+    "description": "Make dynamic pages Progressive ready",
+    "keywords": ["mysql", "dynamic", "progressive", "web", "mysqli","mysqlj","Dapps","CSS3 Grids","Mobile Apps"],
+    "homepage": "https://github.com/dhuny/mysqlj.git",
+    "license": "MIT",
+    "replace": {
+        "dhuny/mysqlj": "*"
+    },
+    "authors": [
+        {
+            "name": "Dhuny Riyad",
+            "email": "riyad@dhuny.org",
+            "homepage": "https://dhuny.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.31"
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    }
+}
