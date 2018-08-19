@@ -13,9 +13,13 @@ $ composer require dhuny/mysqlj:dev-master
 Include the following codes in your PHP  
 
 require 'vendor/autoload.php';
+
 use dhuny\mysqlj\mysqlj;
+
 use dhuny\mysqlj\mysqlj_result;
+
 use dhuny\mysqlj\mysqlj_cache;
+
 use dhuny\mysqlj\filterfiles;
 
 # Application of the Library
