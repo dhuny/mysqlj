@@ -8,7 +8,7 @@ Install the latest version with
 
 $ composer require dhuny/mysqlj:dev-master
 
-#Basic Usage
+# Basic Usage
 
 Include the following codes in your PHP  
 
