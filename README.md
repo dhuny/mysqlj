@@ -4,7 +4,7 @@ A php / mysql library to convert mysqli into a multi-level reusable static query
 
 # Installation
 
-Install the latest version with
+Install the latest version with (Type composer without the $ sign on bash)
 
 $ composer require dhuny/mysqlj:dev-master
 
