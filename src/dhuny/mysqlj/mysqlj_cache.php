@@ -18,9 +18,10 @@ public function __construct($jsonObject)
 {
 		if(!is_null($jsonObject))
 	{
+		
 		parent::__construct($jsonObject);
 	}else{
-		echo("JSON Object Assigned is null");
+		echo("JSON Object Assigned is null. Error located in MySQLj_Cache.php");
 		}
 
 }

@@ -83,14 +83,19 @@ public function __construct($host, $user, $pwd, $db,$refresh=0)
 	
 	if($this->isCacheConsistent(10))  //Here we compare if timestamp of file to check if cache valid
 	{
-	//	echo("/n Cache is valid \n");
+		echo("\n Cache is valid Pulling data from JS file and loading into PHP \n <br>");
 		// If cache valid we will load data from text file immediately.
 		$this->cacheValid = true;
 		$textfile->seek(10); // read line 11 from textfile.
 		$result = $textfile->current();
-		$result = ltrim($result,"var result ='");
-		$result = str_replace("]';","]",$result);
+		//var_dump($result);
+		$result = ltrim($result,"var results ='");
+		//$result = rtrim($result,',null]\';"');
+		$result = substr($result, 0, -3); // Very Important: Presence of Ending Space was causing error in file.
+		//$result = str_replace("]';","]",$result);  //  Previous line is replacing for testing
 		$result = json_decode($result);
+		//unset($result[count($result) - 1]);
+		//var_dump($result);
 		$this->result = $result;
 		array_push($OfflineExport,true); // set Cache Valid to true;
 		//var_dump($result);
@@ -270,7 +275,8 @@ public function query($sql)
 //var_dump($this->cacheValid);
 if($this->cacheValid == true){
 	
-$results = new mysqlj_cache($this->result);
+
+$results = new mysqlj_cache($this->result); //
 }else
 {
 	// if there is no file. This means no Export Ever done

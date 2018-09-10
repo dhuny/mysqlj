@@ -161,6 +161,7 @@ $thejs .= "/* start of results*/  \n ";
 $thejs .= "var results ='".json_encode($results)."';\n ";
 $thejs .= "/*End of Results*/ \n ";
 $thejs .= "var results =JSON.parse(results);\n ";
+$thejs .= "results.pop();\n ";
 $thejs .= "var fields_length =".count($fields).";\n ";
 $thejs .= "var db ='".$db."';\n ";
 $thejs .= "var db = openDatabase(db, '1.0', 'Test DB', 2 * 1024 * 1024);"."\n ";
